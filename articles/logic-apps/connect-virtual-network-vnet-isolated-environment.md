@@ -48,7 +48,7 @@ This article shows how to complete these tasks:
 
   * Your virtual network needs to have four *empty* subnets for creating and deploying resources in your ISE. You can create these subnets in advance, or you can wait until you create your ISE where you can create subnets at the same time. Learn more about [subnet requirements](#create-subnet).
   
-  * One of these empty subnets must be delegated to **Microsoft.Logic/integrationServiceEnvironment**
+  * If you're using Azure PowerShell, Azure Resource Manager templates, Azure CLI, or the Azure REST APIs to create and manage subnets, you must [delegate one empty subnet](../virtual-network/virtual-network-manage-subnet.md) to the `Microsoft.Logic/integrationServiceEnvironment` resource type. 
 
   * Subnet names need to start with either an alphabetic character or an underscore and can't use these characters: `<`, `>`, `%`, `&`, `\\`, `?`, `/`. 
 
@@ -143,7 +143,7 @@ In the search box, enter "integration service environment" as your filter.
 
    **Create subnet**
 
-   To create and deploy resources in your environment, your ISE needs four *empty* subnets that aren't delegated to any service. You *can't* change these subnet addresses after you create your environment.
+   To create and deploy resources in your environment, your ISE needs four *empty* subnets that aren't delegated to any service. However, if you're using Azure PowerShell, Azure Resource Manager templates, Azure CLI, or the Azure REST APIs to create and manage subnets, you must [delegate one empty subnet](../virtual-network/virtual-network-manage-subnet.md) to the `Microsoft.Logic/integrationServiceEnvironment` resource type. You *can't* change these subnet addresses after you create your environment. 
    
    > [!IMPORTANT]
    > 
